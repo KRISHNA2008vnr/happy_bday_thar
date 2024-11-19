@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Cat</title>
+    <link rel="stylesheet" href="catstyles.css">
+</head>
+<body >
+<!-- Navigation Bar -->
+<nav class="navbar" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;">
+    <ul>
+        <li><a href="index.html">VIDEO</a></li>
+        <li><a href="c.html">PET CAT</a></li>
+        <li><a href="g.html">GREETING CARD</a></li>
+        
+    </ul>
+</nav>
+
+
+
+<div class="container">
+    <!-- First Row -->
+    <div class="row-container">
+        
+        
+       
+        <!-- Column 2: Additional Media Container -->
+        <div id="mediaContainer" class="column frame media-frame" style="display:block; top:20px">
+            <video id="petVideo" class="pet-video" autoplay muted loop>
+                <source src="still.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video id="realPetVideo" class="media-video" autoplay muted src="still.mp4"></video>
+            <img id="beautifulPersonImage" class="media-image" src="" alt="Beautiful Person">
+        </div>
+    </div>
+    
+    <!-- Second Row -->
+    <div class="row-container">
+        <!-- Column 1: Button Group and Text -->
+        <div class="column button-text-container">
+            <div class="button-container">
+                <button id="feedButton" class="btn">Feed the Pet</button>
+                <button id="realPetButton" class="btn">Your Real Pet</button>
+                <button id="beautifulPersonButton" class="btn">The World's Most Beautiful Person</button>
+            </div>
+            <div class="text-container">
+                <h2>About Your Virtual Pet</h2>
+                <p>Welcome to your new virtual pet companion! Interact with the cat, feed it, and enjoy its playful behavior.</p>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+
+<script src="catscript.js"></script>
+</body>
+</html>

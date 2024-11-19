@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Greeting Card</title>
+    <link rel="stylesheet" href="greetstyles.css">
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;">
+    <ul>
+        <li><a href="index.html">VIDEO</a></li>
+        <li><a href="c.html">PET CAT</a></li>
+        <li><a href="g.html">GREETING CARD</a></li>
+        
+    </ul>  
+</nav>
+
+<div class="header-image" style="padding-top: 10px;">
+    <img src="head.png" alt="Header Image">
+</div>
+
+<!-- Card Container -->
+<div class="card-container">
+    <div class="card" id="card" onclick="flipCard()">
+        <div class="page front">
+            <img src="1.png" alt="First Page">
+        </div>
+        <div class="page middle">
+            <img src="2.png" alt="Second Page">
+        </div>
+    </div>
+</div>
+
+<!-- Confetti Container -->
+<div class="confetti-container" id="confettiContainer"></div>
+
+<script src="greetscript.js"></script>
+</body>
+</html>

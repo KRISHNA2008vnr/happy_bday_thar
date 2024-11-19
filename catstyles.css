@@ -1,0 +1,238 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+  overflow: scroll;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    overflow: hidden;
+    
+      margin: 0;
+      padding: 0;
+      background-image: url('head.png'); /* Replace 'your-image.jpg' with the path to your image */
+      background-size: cover; /* Ensures the image covers the whole viewport */
+      background-position: center; /* Centers the background image */
+      background-repeat: no-repeat; /* Prevents the image from repeating */
+      background-attachment: fixed; /* Keeps the background image fixed while scrolling */
+  
+}
+
+/* Interactive background styling */
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff6a00, #ff0099, #ff00ff, #0099ff);
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
+    z-index: -1;
+}
+
+/* Gradient animation */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container and frames */
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.frame {
+    position: relative;
+    border: 8px solid transparent;
+    border-radius: 15px;
+    padding: 5px;
+    overflow: hidden;
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    animation: pulse 3s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+.pet-frame {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 20px;
+}
+
+.media-frame {
+    width: 100%;
+    height: 250px;
+    display: none;
+    margin-bottom: 20px;
+}
+
+/* Video and Image Styles */
+.pet-video, .media-video, .media-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Button and Text Container with Transparent Background */
+.button-text-container {
+    background: rgba(128, 128, 128, 0.7); /* Grey box with 70% transparency */
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Button Styles */
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    flex: 1;
+    padding: 10px;
+    background-color: #ff3f81;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff7fa4;
+    transform: scale(1.1);
+}
+
+.text-container {
+    text-align: center;
+}
+
+/* Mobile Orientation */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+}
+/* Body Styling */
+body {
+  background-color: black;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #FFD700;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+  background-color: #333;
+  border-bottom: 2px solid #444;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Logo Image Link */
+.navbar li img {
+  height: 42px;
+  vertical-align: middle;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+/* Link Styling */
+.navbar a {
+  color: #FFD700;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+.navbar a:hover {
+  background-color: #FFD700;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Active Link Styling */
+.navbar a.active {
+  background-color: #FFD700;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar li {
+    margin: 10px 0;
+  }
+  /* Mobile styling for screens 600px and smaller */
+@media (max-width: 600px) {
+  .navbar ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+  }
+
+  .navbar ul li {
+      flex: 1; /* Ensures each item shares the width equally */
+      text-align: center;
+  }
+
+  .navbar ul li a {
+      padding: 10px;
+      font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+}
